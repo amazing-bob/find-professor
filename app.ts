@@ -12,12 +12,10 @@ console.log(`-----------------START ------------------- totalCount:: ${jejuUnivM
 
 // url 로 html 페이지 가져오기
 let getPage = (url: string, idx: number): Promise<any> => {
-  console.log(url);
-
     return new Promise((resolve, reject) => {
       axios.get(url, {responseType: 'text'})
         .then(res => {
-          console.log(`[${res.status}] ${url}`);
+          console.log(`#${idx} [${res.status}] ${url}`);
           if (res && res.status === 200 && res.data) {
             let hasProfessorUrl = undefined;
             if (hasTargetProfessor(res.data, targetName)) {
@@ -73,6 +71,10 @@ async function getPages() {
   console.log(`resultCount:: ${resultUrls.length}`);
   console.log(resultUrls);
   console.log('-----------------------------------------------');
+  /*************************************************************
+  // 고성택 교수 파싱 결과
+  // http://www.jejunu.ac.kr/colleges/engr/comdol/professor
+  *************************************************************/
 }
 
 // 실행
