@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const cheerio = require("cheerio");
 const axios_1 = require("axios");
 const urls_1 = require("./urls");
-const targetName = '고성택';
+const targetName = '찾고싶은 제대교수 이름';
 console.log(`-----------------START ------------------- totalCount:: ${urls_1.jejuUnivMajorUrls.length}`);
 // url 로 html 페이지 가져오기
 let getPage = (url, idx) => {
@@ -69,10 +69,6 @@ function getPages() {
         console.log(`resultCount:: ${resultUrls.length}`);
         console.log(resultUrls);
         console.log('-----------------------------------------------');
-        /*************************************************************
-        // 고성택 교수 파싱 결과
-        // http://www.jejunu.ac.kr/colleges/engr/comdol/professor
-        *************************************************************/
     });
 }
 // 실행

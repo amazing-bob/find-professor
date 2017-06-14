@@ -5,7 +5,7 @@ import request from "request";
 
 import {  jejuUnivMajorUrls } from "./urls";
 
-const targetName: string = '고성택';
+const targetName: string = '찾고싶은 제대교수 이름';
 
 console.log(`-----------------START ------------------- totalCount:: ${jejuUnivMajorUrls.length}`);
 
@@ -71,10 +71,6 @@ async function getPages() {
   console.log(`resultCount:: ${resultUrls.length}`);
   console.log(resultUrls);
   console.log('-----------------------------------------------');
-  /*************************************************************
-  // 고성택 교수 파싱 결과
-  // http://www.jejunu.ac.kr/colleges/engr/comdol/professor
-  *************************************************************/
 }
 
 // 실행
