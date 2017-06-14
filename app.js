@@ -19,7 +19,7 @@ let getPage = (url, idx) => {
     return new Promise((resolve, reject) => {
         axios_1.default.get(url, { responseType: 'text' })
             .then(res => {
-            console.log(`[${res.status}] ${url}`);
+            console.log(`#${idx} [${res.status}] ${url}`);
             if (res && res.status === 200 && res.data) {
                 let hasProfessorUrl = undefined;
                 if (hasTargetProfessor(res.data, targetName)) {
